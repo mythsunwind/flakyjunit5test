@@ -8,11 +8,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class FlakyTest {
 
-    private final Random random = new Random();
-
     @Test
     public void flakyTest() {
-        assertThat(random.nextBoolean()).isTrue();
+        assertThat(new Random().nextBoolean()).isTrue();
     }
 
     @Test
